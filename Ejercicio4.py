@@ -1,5 +1,12 @@
-import urllib
+import urllib.request
 
-def lector_link(url):
-    file = urllib.request.urlopen(url)
+def lector_link(link):
+    file = urllib.request.urlopen(link)
+    contenido = file.read()
+    print(len(contenido.split()))
+    return
+
+link = 'https://www.marca.com/'
+
+lector_link(link)
 
